@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dark Web Explorer</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            background-image: url('logo1.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Header styling */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Navigation styling */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+
+        /* Main content styling */
+        main {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            animation: slideIn 1s ease-out;
+            text-align: center;
+        }
+
+        /* Headings and paragraphs */
+        h1, h2, p {
+            color: #fff;
+        }
+
+        /* Button styling */
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function redirectToLogin() {
+            window.location.href = 'login.html';
+        }
+
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dark Web Explorer</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToPage('personal_info.html')">Personal Info</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToLogin()">Resources</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToPage('onion.html')">Onion Sites</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToPage('torbrowser.html')">Tor Browser</a></li>
+            <li><a href="javascript:void(0);" onclick="redirectToPage('darkweb.html')">Dark Web</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>What are Onion Sites?</h2>
+            <p>
+                Onion sites (aka Tor sites) are websites only accessible on the dark web; you can’t view them using a regular browser. Their URLs have .onion as the domain, instead of the common surface web domains like .com or .net. Onion sites are considered hidden in the deep web, and they use Tor to encrypt connections to them, keeping visitors and the site creators anonymous.
+            </p>
+            <h2>How do Onion Sites Work?</h2>
+            <p>
+                When you try to connect to a .onion website, your traffic gets routed around the internet, bouncing three times to random servers before it reaches your destination website. Each server adds a layer of encryption, and these layers give rise to the name The Onion Router. This is also why the sites on the dark web are called Tor links.
+            </p>
+            <h2>Tor and the Onion Browser</h2>
+            <p>
+                Inside the Tor network, sites cannot use regular domain names. Instead, they use pseudo-domain names ending in .onion. These domain names are not registered with a central authority but are instead derived from cryptographic keys.
+            </p>
+            <p>
+                You can’t access these .onion sites from your normal web browser—the one you’re probably viewing this page on. Before clicking any of the dark web links below, you’ll need to get the Tor Browser (also called the Onion Browser) or another service that provides dark web access, such as the Brave browser.
+            </p>
+            <h2>How to Install Tor Browser</h2>
+            <h3>Windows and Linux</h3>
+            <p>
+                1. Visit the <a href="https://www.torproject.org" target="_blank">Tor Project website</a>.<br>
+                2. Download the Tor Browser installer for Windows or Linux.<br>
+                3. Run the installer and follow the on-screen instructions.<br>
+                4. Once installed, open the Tor Browser and click "Connect" to start browsing.
+            </p>
+            <h3>macOS</h3>
+            <p>
+                1. Visit the <a href="https://www.torproject.org" target="_blank">Tor Project website</a>.<br>
+                2. Download the Tor Browser installer for macOS.<br>
+                3. Open the downloaded file and drag the Tor Browser into your Applications folder.<br>
+                4. Open the Tor Browser from your Applications folder and click "Connect" to start browsing.
+            </p>
+            <h3>iOS</h3>
+            <p>
+                1. Download the <a href="https://apps.apple.com/us/app/onion-browser/id519296448" target="_blank">Onion Browser</a> from the App Store.<br>
+                2. Open the Onion Browser app and start browsing dark web sites.
+            </p>
+            <h3>Android</h3>
+            <p>
+                1. Download the <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser" target="_blank">Tor Browser</a> from the Google Play Store.<br>
+                2. Open the Tor Browser app and click "Connect" to start browsing.
+            </p>
+        </section>
+        <button onclick="redirectToLogin()">Click Here to Access the Dark Web</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dark Web Explorer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

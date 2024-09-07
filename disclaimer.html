@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Disclaimer</title>
+</head>
+<body>
+    <header>
+        <h1>Disclaimer</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Disclaimer</h2>
+            <p>
+                By accessing the following link, you acknowledge that you are aware of the risks associated with visiting dark web sites. Please ensure you understand the potential consequences before proceeding.
+            </p>
+            <form action="javascript:void(0);">
+                <button onclick="acceptDisclaimer()">I Accept</button>
+                <button onclick="window.location.href='onionlinks.html'">I Do Not Accept</button>
+            </form>
+            <script>
+                function getUrl() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get('url');
+                }
+
+                function acceptDisclaimer() {
+                    const url = getUrl();
+                    if (url) {
+                        window.location.href = url;
+                    } else {
+                        alert('No URL found.');
+                    }
+                }
+            </script>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dark Web Explorer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

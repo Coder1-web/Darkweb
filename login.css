@@ -1,0 +1,77 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    background-image: url('D:/Program Files/website/logo1.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    overflow: auto; /* Ensure scrolling if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    animation: pageFadeIn 1s ease-in-out; /* Page fade-in effect */
+}
+
+/* Styling for the login container */
+.login-container {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: popIn 0.5s ease-in-out; /* Pop-in animation */
+}
+
+/* Input styling */
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 4px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* Button styling */
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: popIn 0.5s ease-in-out; /* Button pop-in animation */
+}
+
+button:hover {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.1); /* Popout effect */
+}
+
+/* Fade-in animation for the entire page */
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pop-in animation for elements */
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

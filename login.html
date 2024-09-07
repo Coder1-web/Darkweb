@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"> <!-- Ensure this link points to your CSS file -->
+    <script>
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+            if (password === 'darkstuff3022') {
+                window.location.href = 'nextpage.html'; // Redirect to next page on correct password
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+            return false; // Prevent form from submitting
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form onsubmit="return validatePassword()">
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
